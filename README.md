@@ -25,6 +25,7 @@ Bước 1: Clone kho lưu trữ
 
 Bash
 git clone [https://github.com/duongcongdinh2006-ctrl/TrainingManagement.git]
+
 Bước 2: Cài đặt các Dependencies
 Mở file TrainingManagement.sln bằng Visual Studio 2022. Quá trình Restore NuGet Packages (EF Core, SQLite, CsvHelper) sẽ tự động diễn ra.
 Lưu ý: Nếu thư viện không tự tải, vui lòng điều hướng đến Tools > NuGet Package Manager > Manage NuGet Packages for Solution để restore thủ công.
