@@ -1,24 +1,17 @@
-﻿using System.Text;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿using System.Windows;
+using TrainingManagement.WPF.ViewModels;
 
-namespace TrainingManagement.WPF
+namespace TrainingManagement.WPF.Views
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
+
+            // Gắn DataContext của toàn bộ cửa sổ này cho MainViewModel.
+            // Nếu không có dòng này, mấy cái Binding trong XAML sẽ bị "mù", bấm nút không chạy.
+            this.DataContext = new MainViewModel();
         }
     }
 }

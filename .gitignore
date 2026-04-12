@@ -2,3 +2,7 @@
 [Bb]in/
 [Oo]bj/
 *.db
+# SQLite database files
+*.db
+*.db-shm
+*.db-wal
