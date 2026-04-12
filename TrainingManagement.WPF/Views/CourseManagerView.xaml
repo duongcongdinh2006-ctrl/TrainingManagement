@@ -6,7 +6,33 @@
              xmlns:local="clr-namespace:TrainingManagement.WPF.Views"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-            
+    <Grid Background="#FDFDFD" Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Margin="0,0,0,20">
+            <TextBlock Text="QUẢN LÝ DANH MỤC HỌC PHẦN" FontSize="24" FontWeight="Bold" Foreground="#2C3E50"/>
+            <Separator Height="2" Background="#3498DB" Margin="0,5,0,0"/>
+        </StackPanel>
+
+        <DataGrid Grid.Row="1" AutoGenerateColumns="True" CanUserAddRows="False"
+                  Background="White" BorderBrush="#DCDDE1" RowHeight="30">
+            <DataGrid.ColumnHeaderStyle>
+                <Style TargetType="DataGridColumnHeader">
+                    <Setter Property="Background" Value="#34495E"/>
+                    <Setter Property="Foreground" Value="White"/>
+                    <Setter Property="Padding" Value="5"/>
+                </Style>
+            </DataGrid.ColumnHeaderStyle>
+        </DataGrid>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,20,0,0">
+            <Button Content="Thêm Học Phần" Width="120" Height="35" Margin="5" Background="#2ECC71" Foreground="White" BorderThickness="0"/>
+            <Button Content="Sửa" Width="80" Height="35" Margin="5" Background="#3498DB" Foreground="White" BorderThickness="0"/>
+            <Button Content="Xóa" Width="80" Height="35" Margin="5" Background="#E74C3C" Foreground="White" BorderThickness="0"/>
+        </StackPanel>
     </Grid>
 </UserControl>

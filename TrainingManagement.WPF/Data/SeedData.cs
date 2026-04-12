@@ -77,6 +77,15 @@ namespace TrainingManagement.WPF.Data
                 );
                 context.SaveChanges();
             }
+            if (!context.TrainingPlans.Any())
+            {
+                var program = context.Programmes.FirstOrDefault();
+                if (program != null)
+                {
+                    context.TrainingPlans.Add(new TrainingPlan { PlanName = "Kế hoạch 2026", AcademicYear = 2026, ProgrammeId = program.Id });
+                    context.SaveChanges();
+                }
+            }
         }
     }
 }
