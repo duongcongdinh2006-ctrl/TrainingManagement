@@ -10,7 +10,8 @@ namespace TrainingManagement.WPF.Data
         public DbSet<Room> Rooms { get; set; }
         public DbSet<Lecturer> Lecturers { get; set; }
         public DbSet<Course> Courses { get; set; }
-
+        public DbSet<TrainingPlan> TrainingPlans { get; set; }
+        public DbSet<TrainingPlanCourse> TrainingPlanCourses { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             // Cấu hình lưu file SQLite thẳng vào thư mục chạy app

@@ -47,4 +47,23 @@ namespace TrainingManagement.WPF.Models
         public string CourseName { get; set; } = string.Empty;
         public int Credits { get; set; }
     }
+    public class TrainingPlan
+    {
+        public int Id { get; set; }
+        public string PlanName { get; set; } = string.Empty;
+        public int AcademicYear { get; set; }
+        public int ProgrammeId { get; set; }
+        public Programme? Programme { get; set; }
+        public ICollection<TrainingPlanCourse> TrainingPlanCourses { get; set; } = new List<TrainingPlanCourse>();
+    }
+
+    public class TrainingPlanCourse
+    {
+        public int Id { get; set; }
+        public int TrainingPlanId { get; set; }
+        public TrainingPlan? TrainingPlan { get; set; }
+        public int CourseId { get; set; }
+        public Course? Course { get; set; }
+        public int RecommendedSemester { get; set; }
+    }
 }
